@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    color: white;
+}
+
+body {
+    /* background: rgba(205, 214, 219, 0.3);
+	background-image: url(/img/logo.svg) center no-reapeat; */
+    background: url(/img/logo_transparent.svg) top 15vw center/ 40vw no-repeat,
+        linear-gradient(320deg, #f27121, #e94057, #8a2387);
+    font-family: "Roboto", sans-serif;
+}
+
+/*  */
+
+body {
+    animation: theme 21s linear infinite;
+
+    &:after,
+    &:before {
+        content: "";
+        display: block;
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        width: 100vmax;
+        height: 100vmax;
+        background: rgba(0, 0, 0, 0.05);
+        animation: background 90s linear infinite;
+    }
+
+    &:after {
+        left: 15vw;
+    }
+
+    &:before {
+        right: 15vw;
+        animation-delay: -30s;
+        animation-direction: reverse;
+    }
+}
+
+@keyframes theme {
+    0% {
+        background: #74c390;
+    }
+
+    16% {
+        background: #5dbdb6;
+    }
+
+    33% {
+        background: #59d4e1;
+    }
+
+    50% {
+        background: #51bce8;
+    }
+
+    66% {
+        background: #fa5374;
+    }
+
+    83% {
+        background: #e46653;
+    }
+
+    100% {
+        background: #74c390;
+    }
+}
+
+@keyframes background {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/*  */
+
+.header {
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.icon-title-box__logo {
+    width: 56px;
+    height: auto;
+}
+
+.icon-title-box__title {
+    position: sticky;
+    top: 0;
+    font-size: 8vw;
+    color: white;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.center {
+    padding-left: calc(50% - 49vw);
+    padding-right: calc(50% - 49vw);
+}
+
+.schedule-box {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    padding: 2vw;
+}
+
+.title {
+    position: sticky;
+    top: 0;
+    font-size: 3vw;
+    color: white;
+    text-align: center;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.schedule_item-box {
+    min-width: 290px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 2vw;
+}
+
+.schedule_item-box:hover {
+    border-radius: 0;
+    box-shadow: 0 0px 66px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease-out;
+    z-index: 999;
+    // transform: scale(1.01);
+}
+
+/* p {
+	margin-bottom: 1vw;
+} */
+
+.schedule_item-title {
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin-bottom: 0.2vw;
+}
+
+.schedule_item-time {
+    font-size: 0.8vw;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1vw;
+}
+
+.schedule_item-maxnumber,
+.schedule_item-currentnumber {
+    font-size: 1vw;
+    font-weight: 200;
+    color: white;
+}
+
+span {
+    font-size: 2vw;
+    font-weight: 900;
+    line-height: 0.1em;
+}
+
+.button-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1vw;
+}
+
+.button-submit,
+.button-reject {
+    margin-top: 1vw;
+    padding: 0.6vw;
+    background-color: white;
+    border-radius: 2vw;
+    color: gray;
+    cursor: pointer;
+    font-size: 0.6vw;
+    border: 1px solid white;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.button-submit:hover,
+.button-reject:hover {
+    background: aliceblue;
+    border: 1px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    color: black;
+    transition: all 0.2s ease-out;
+    transform: scale(1.05);
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.full {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1vw;
+}
+
+.full:last-child {
+    margin-bottom: 2vw;
+}
+
+.logobox {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 13vw;
+    text-align: center;
+    z-index: -1;
+}
+
+.logobox img {
+    width: 33%;
+}
+
+.no-hover:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
