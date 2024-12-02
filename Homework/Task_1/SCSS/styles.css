@@ -13,7 +13,7 @@ body {
 body {
   /* background: rgba(205, 214, 219, 0.3);
   background-image: url(/img/logo.svg) center no-reapeat; */
-  background: url(../img/logo_transparent.svg) top 15vw center/40vw no-repeat, linear-gradient(320deg, #f27121, #e94057, #8a2387);
+  background: url(/img/logo_transparent.svg) top 15vw center/40vw no-repeat, linear-gradient(320deg, #f27121, #e94057, #8a2387);
   font-family: "Roboto", sans-serif;
 }
 
